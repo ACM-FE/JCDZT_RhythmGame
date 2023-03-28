@@ -1,0 +1,207 @@
+{
+  "main": {
+    "id": "710d5aea747a0a47",
+    "type": "split",
+    "children": [
+      {
+        "id": "693707196190ecbf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2209bcc407ceb92c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "c827f0478222fb7e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rhythm Library.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b7f965e595324bf2",
+    "type": "split",
+    "children": [
+      {
+        "id": "d65b32c27e255c10",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6da0afa58637316e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0484af9122d48598",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "931dd0941adc7e44",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3eb76497af80371a",
+    "type": "split",
+    "children": [
+      {
+        "id": "6bc9450a12146f63",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eec4337cd735c8aa",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Rhythm Library.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f6a80265f5671155",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Rhythm Library.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9fda9ebb93d1c9e6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "31f366005110727d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Rhythm Library.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "c827f0478222fb7e",
+  "lastOpenFiles": [
+    "RhythmPrototype/Temp/UnityTempFile-70f9b5cef81015e41b39f5c858373032",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Rider/Editor/Util/StringUtils.cs.meta",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Rider/Editor/Util/StringUtils.cs",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Rider/Editor/Util/SerializableVersion.cs.meta",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Rider/Editor/Util/SerializableVersion.cs",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Rider/Editor/Util/RiderPathUtil.cs.meta",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Rider/Editor/Util/RiderPathUtil.cs",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Rider/Editor/Util/RiderMenu.cs.meta",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Rider/Editor/Util/RiderMenu.cs",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Rider/Editor/Util/LibcNativeInterop.cs.meta",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Rider/Editor/Util/LibcNativeInterop.cs",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Documentation~/images/preferences-settings-external-tools-window.png",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Documentation~/images/preferences-rider-tab.png",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Documentation~/using-the-jetbrains-rider-editor-package.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Documentation~/README.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Documentation~/TableOfContents.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/Documentation~/index.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/LICENSE.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/CONTRIBUTING.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.ide.rider@3.0.18/CHANGELOG.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.searcher@4.9.2/Editor/Resources/FlatSkin/SearchSmallDownOn@2x.png",
+    "RhythmPrototype/Library/PackageCache/com.unity.searcher@4.9.2/Editor/Resources/FlatSkin/SearchSmallDownOn.png",
+    "RhythmPrototype/Library/PackageCache/com.unity.searcher@4.9.2/Editor/Resources/FlatSkin/SearchSmallDownOff@2x.png",
+    "RhythmPrototype/Library/PackageCache/com.unity.searcher@4.9.2/Editor/Resources/FlatSkin/SearchSmallDownOff.png",
+    "RhythmPrototype/Library/PackageCache/com.unity.searcher@4.9.2/Samples~/Resources/twotone_science_white_18dp.png",
+    "RhythmPrototype/Library/PackageCache/com.unity.searcher@4.9.2/Samples~/Resources/twotone_science_black_18dp.png",
+    "RhythmPrototype/Library/PackageCache/com.unity.searcher@4.9.2/Samples~/Resources/twotone_outdoor_grill_white_18dp.png",
+    "RhythmPrototype/Library/PackageCache/com.unity.searcher@4.9.2/Samples~/Resources/twotone_outdoor_grill_black_18dp.png",
+    "RhythmPrototype/Library/PackageCache/com.unity.searcher@4.9.2/Documentation~/index.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.searcher@4.9.2/README.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.searcher@4.9.2/LICENSE.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.searcher@4.9.2/CHANGELOG.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.timeline@1.7.3/Documentation~/wf_nested.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.timeline@1.7.3/Documentation~/wf_rec_anim.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.timeline@1.7.3/Documentation~/wf_mask.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.timeline@1.7.3/Documentation~/wf_instance.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.timeline@1.7.3/Documentation~/wf_conv_infinite.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.timeline@1.7.3/Documentation~/trk_lock.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.timeline@1.7.3/Documentation~/wf_char_anim.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.timeline@1.7.3/Documentation~/wf_about.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.timeline@1.7.3/Documentation~/uss_styles.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.timeline@1.7.3/Documentation~/trk_select.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.timeline@1.7.3/Documentation~/trk_reorder.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.timeline@1.7.3/Documentation~/trk_mute.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.timeline@1.7.3/Documentation~/trk_list_about.md",
+    "RhythmPrototype/Library/PackageCache/com.unity.timeline@1.7.3/Documentation~/trk_dup.md"
+  ]
+}
