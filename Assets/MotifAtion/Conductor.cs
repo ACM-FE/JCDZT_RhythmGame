@@ -6,17 +6,20 @@ using UnityEngine.UI;
 
 public class Conductor : MonoBehaviour
 {
+    [Header("Setup")]
     public float audioDelayMS;
-    public int bpm;
     AudioSource music;
-    
 
+    [Space(20)]
+    public Song song;
+    
+    [Space(20)][Header("Debug")]
     public Image circle;
     // constructor for an actual song, easy to read from script
     class songData{
         public float bpm;
         public float spb;
-        // (crotches in a bar)
+        // (crotchets in a bar)
         public int cib;
         public songData(float Bpm, int cInBar=4) {
             bpm = Bpm;
@@ -31,10 +34,10 @@ public class Conductor : MonoBehaviour
     }
 
     // temporary prolly
-    void Start(){music=GetComponent<AudioSource>();Conduct(new songData(bpm));}
+    void Start(){music=GetComponent<AudioSource>();Conduct(song);}
     
     // alright let's figure out how the fuck this is gonna work
-    void Conduct(songData song) {
+    void Conduct(Song song) {
         UnityEvent beatCall = new UnityEvent();
         beatCall.AddListener(Beat);
         float songPosition = 0.0f;
@@ -64,5 +67,5 @@ public class Conductor : MonoBehaviour
 
     void Beat() {;
         circle.enabled = !circle.enabled;
-    }
+    },
 }
