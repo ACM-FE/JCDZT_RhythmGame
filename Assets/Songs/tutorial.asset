@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04afb4ce541b70cb9492e7d07e4ca66, type: 3}
   m_Name: tutorial
   m_EditorClassIdentifier: 
-  bpm: 0
-  spb: 0
-  cib: 0
+  Title: Tutorial
+  Artist: rosa
+  Album: 
+  bpm: 120
+  spb: 0.5
+  cib: 4
+  song: {fileID: 8300000, guid: 13e221fa6a4d93441b8cba1251e0a7d8, type: 3}

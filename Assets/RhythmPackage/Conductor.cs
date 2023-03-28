@@ -40,12 +40,17 @@ public class Conductor : MonoBehaviour
     void Conduct(Song song) {
         UnityEvent beatCall = new UnityEvent();
         beatCall.AddListener(Beat);
+        
         float songPosition = 0.0f;
         float songPositionBeats=0.0f;
         float nextBeat = songPosition + song.cib;
+
         int bar = 1;
         int beat = 0;
+
         float startTime = (float)AudioSettings.dspTime;
+
+        music.clip = song.song;
         music.Play();
         
         IEnumerator clock() {
