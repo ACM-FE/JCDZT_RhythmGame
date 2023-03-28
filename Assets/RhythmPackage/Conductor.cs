@@ -67,5 +67,5 @@ public class Conductor : MonoBehaviour
 
     void Beat() {;
         circle.enabled = !circle.enabled;
-    },
+    }
 }
