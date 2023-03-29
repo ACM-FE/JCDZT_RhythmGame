@@ -1,0 +1,35 @@
+Label {
+    color: rgb(255, 255, 255);
+    -unity-font: url('project://database/Assets/RhythmPackage/Ac437_IBM_BIOS.ttf?fileID=12800000&guid=46b92ba9a98a4a44d8b7d0de1d3c47a1&type=3#Ac437_IBM_BIOS');
+    opacity: 1;
+    -unity-font-definition: initial;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+Label.header {
+    -unity-font-definition: initial;
+    -unity-font: url('project://database/Assets/RhythmPackage/Ac437_IBM_BIOS.ttf?fileID=12800000&guid=46b92ba9a98a4a44d8b7d0de1d3c47a1&type=3#Ac437_IBM_BIOS');
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    font-size: 20px;
+    -unity-text-align: upper-center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+TextField.info {
+    align-self: center;
+    width: auto;
+    -unity-font: url('project://database/Assets/RhythmPackage/Ac437_IBM_BIOS.ttf?fileID=12800000&guid=46b92ba9a98a4a44d8b7d0de1d3c47a1&type=3#Ac437_IBM_BIOS');
+    -unity-font-definition: initial;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+SliderInt {
+    margin-left: 20px;
+    margin-right: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+}

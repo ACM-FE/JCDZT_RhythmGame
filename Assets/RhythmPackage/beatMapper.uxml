@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/RhythmPackage/rosa.uss?fileID=7433441132597879392&amp;guid=10e7abdcc95d3d74eb853f40c9b8613a&amp;type=3#rosa" />
+    <ui:Label tabindex="-1" text="/ShittyRhythmStack by rosaParvum &lt;3" display-tooltip-when-elided="true" style="align-self: center; margin-top: 8px;" />
+    <ui:Label tabindex="-1" display-tooltip-when-elided="true" text="Info" name="Info" class="header" style="-unity-font-style: bold; font-size: 20px;" />
+    <ui:TextField picking-mode="Ignore" label="Title" value="filler text" name="Name" binding-path="Title" class="info" style="justify-content: flex-start; align-self: center;" />
+    <ui:TextField picking-mode="Ignore" label="Artist" value="filler text" name="Artist" binding-path="Artist" class="info" style="justify-content: flex-start; align-self: center;" />
+    <ui:TextField picking-mode="Ignore" label="Album&#x9;" value="filler text" name="Album" binding-path="Album" class="info" style="justify-content: flex-start; align-self: center;" />
+    <ui:Label tabindex="-1" text="Music" display-tooltip-when-elided="true" class="header" />
+    <ui:SliderInt picking-mode="Ignore" label="BPM" value="120" high-value="200" name="SliderInt" show-input-field="true" binding-path="bpm" style="color: rgb(255, 255, 255); -unity-font-definition: initial; -unity-font: url(&apos;project://database/Assets/RhythmPackage/Ac437_IBM_BIOS.ttf?fileID=12800000&amp;guid=46b92ba9a98a4a44d8b7d0de1d3c47a1&amp;type=3#Ac437_IBM_BIOS&apos;); height: 20px; text-overflow: clip; margin-right: 4px; margin-top: 0; width: auto; align-self: auto; padding-right: 20px; margin-bottom: 5px;" />
+    <uie:ObjectField label="Song" type="UnityEngine.AudioClip, UnityEngine.AudioModule" allow-scene-objects="false" binding-path="song" style="align-self: center; margin-right: 0; margin-left: 0; margin-bottom: 20px; margin-top: 0; -unity-text-align: upper-center;" />
+    <ui:DropdownField label="Crotchets in Bar" index="-1" choices="2,3,4,5" binding-path="cib" style="font-size: 12px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 248px; justify-content: center; align-self: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 5px;" />
+    <ui:Label tabindex="-1" text="Beatmap" display-tooltip-when-elided="true" class="header" />
+    <ui:ListView focusable="true" binding-path="map" show-border="true" />
+</ui:UXML>
