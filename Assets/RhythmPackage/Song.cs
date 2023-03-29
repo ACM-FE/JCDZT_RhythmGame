@@ -14,6 +14,7 @@ public enum notePosition {
     both
 }
 
+#if UNITY_EDITOR
 [System.Serializable]
 [CustomEditor(typeof(Song))]
 public class beatMapper : Editor {
@@ -21,11 +22,10 @@ public class beatMapper : Editor {
     {   
         VisualTreeAsset uiAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/RhythmPackage/beatMapper.uxml");
         VisualElement ui = uiAsset.Instantiate();
-
         return ui;
     }
 }
-
+#endif
 [CreateAssetMenu(fileName = "Song", menuName = "Song", order = 1)]
 public class Song : ScriptableObject
 {
@@ -49,13 +49,17 @@ public class Song : ScriptableObject
     [Header("Audio")]
     public AudioClip song;
     public float length;
-    public int beatsTotal;
+    public int eighthsTotal;
+    public Object mapFile;
     public notePosition[] map;
 
+    #if UNITY_EDITOR
     void OnValidate() {
+        if (mapFile!=null) {map = midiToBM.MakeBeatmap(mapFile);}
         spb = 60/bpm;
         length = song.length;
-        beatsTotal = (int)(length/spb);
+        eighthsTotal = (int)(length/spb)*2;
     }
+    #endif
 }
 

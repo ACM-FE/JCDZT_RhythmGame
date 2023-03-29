@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44658792, g: 0.49642283, b: 0.5748252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -905,7 +905,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.5}
+  m_Size: {x: 10, y: 0.3}
   m_EdgeRadius: 0
 --- !u!1001 &6854969675137514371
 PrefabInstance:
@@ -1060,6 +1060,11 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1341457442}
+    - target: {fileID: 6198799377167828032, guid: de155cb4bed50284081ca6f2467cd344,
+        type: 3}
+      propertyPath: noteOffset
+      value: -7
+      objectReference: {fileID: 0}
     - target: {fileID: 8257541387152400660, guid: de155cb4bed50284081ca6f2467cd344,
         type: 3}
       propertyPath: m_Name

@@ -12,6 +12,7 @@ public class Conductor : MonoBehaviour
     AudioSource music;
     public GameObject note;
     public Text scoreText;
+    public float noteOffset;
     int score;
 
     [Space(20)]
@@ -30,10 +31,12 @@ public class Conductor : MonoBehaviour
         
         float songPosition = 0.0f;
         int songPositionBeats=0;
+        int songPositionEighths=0;
         float nextBeat = songPosition + song.cib;
 
         int bar = 1;
         int beat = 1;
+        int eighth = 1;
 
         float startTime = (float)AudioSettings.dspTime;
         music.clip = song.song;
@@ -42,19 +45,32 @@ public class Conductor : MonoBehaviour
             
 
             while(music.isPlaying) {
+                
                 //yield return new WaitUntil(() => ((float)AudioSettings.dspTime-startTime)==music.time;)
                 //print(song.map[songPositionBeats]);
-                print(bar+" "+beat+" "+songPositionBeats);
-                Beat(beat,songPositionBeats);               
+                //print(bar+" "+beat+" "+songPositionBeats);
+                //Beat(beat,songPositionBeats);               
                 songPosition = music.time;
                 nextBeat = songPosition+song.spb;
                 songPositionBeats++;
                 beat++;
                 if (beat==song.cib+1) {beat=1;bar++;}
                 
+                //Eighth(songPositionEighths);
+                //print(songPositionEighths);
+                spawn(song.map[songPositionEighths+8]);
+                songPositionEighths++;
 
                 //print(((float)AudioSettings.dspTime-startTime)-music.time);
-                yield return new WaitForSecondsRealtime(song.spb-Time.deltaTime+(audioDelayMS/1000));
+                yield return new WaitForSecondsRealtime((song.spb-Time.deltaTime+(audioDelayMS/1000))/2);
+
+                spawn(song.map[songPositionEighths+8]);
+                //print(songPositionEighths);
+                songPositionEighths++;
+
+
+                yield return new WaitForSecondsRealtime((song.spb-Time.deltaTime+(audioDelayMS/1000))/2);
+                
             }
         }
         StartCoroutine(clock());
@@ -65,11 +81,16 @@ public class Conductor : MonoBehaviour
         spawn(song.map[songPositionBeats+4]);
     }
 
+    void Eighth(int songPositionEighths) {
+        //print(songPositionEighths+8);
+        spawn(song.map[songPositionEighths+10]);
+    }
+
     void spawn(notePosition np) {
         if (np != notePosition.none) {
-            float noteVelocity = 2;
+            float noteVelocity = 10;
             // fuck you for writing this line, moron.
-            float distance = (noteVelocity*((4*(60/song.bpm))));
+            float distance = (noteVelocity*((4*(60/song.bpm))))+noteOffset;
             //print(distance);
             float offset = 0;
             if (np==notePosition.left) {offset -= 2;}

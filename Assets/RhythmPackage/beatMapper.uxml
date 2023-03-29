@@ -10,5 +10,6 @@
     <uie:ObjectField label="Song" type="UnityEngine.AudioClip, UnityEngine.AudioModule" allow-scene-objects="false" binding-path="song" style="align-self: center; margin-right: 0; margin-left: 0; margin-bottom: 20px; margin-top: 0; -unity-text-align: upper-center;" />
     <ui:DropdownField label="Crotchets in Bar" index="-1" choices="2,3,4,5" binding-path="cib" style="font-size: 12px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 248px; justify-content: center; align-self: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 5px;" />
     <ui:Label tabindex="-1" text="Beatmap" display-tooltip-when-elided="true" class="header" />
-    <ui:ListView focusable="true" binding-path="map" show-border="true" />
+    <uie:ObjectField label="Midi File" type="UnityEditor.DefaultAsset, UnityEditor.CoreModule" allow-scene-objects="false" binding-path="mapFIle" />
+    <ui:ListView focusable="true" binding-path="map" />
 </ui:UXML>
