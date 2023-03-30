@@ -55,7 +55,7 @@ public class Song : ScriptableObject
 
     #if UNITY_EDITOR
     void OnValidate() {
-        if (mapFile!=null) {map = midiToBM.MakeBeatmap(mapFile);}
+        if (mapFile!=null) {map = new notePosition[eighthsTotal];map = midiToBM.MakeBeatmap(mapFile);}
         spb = 60/bpm;
         length = song.length;
         eighthsTotal = (int)(length/spb)*2;

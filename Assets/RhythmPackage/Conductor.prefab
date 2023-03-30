@@ -51,8 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ff1b5abaae481d4a9ed3e1a12ce35d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioDelayMS: 0
+  audioDelayMS: 900
+  scriptDelayMS: -5
   note: {fileID: 3885866605232828325, guid: ba9f581cc1f4c074089716e41b46357f, type: 3}
+  scoreText: {fileID: 0}
+  noteOffset: 0
   song: {fileID: 11400000, guid: 459cb97bfd6cc10a89998fa6cefe7319, type: 2}
 --- !u!82 &5032682011825040371
 AudioSource:

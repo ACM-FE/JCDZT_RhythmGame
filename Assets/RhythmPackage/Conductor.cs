@@ -9,10 +9,12 @@ public class Conductor : MonoBehaviour
 {
     [Header("Setup")]
     public float audioDelayMS;
+    public float scriptDelayMS;
     AudioSource music;
     public GameObject note;
     public Text scoreText;
     public float noteOffset;
+    public Transform playhead;
     int score;
 
     [Space(20)]
@@ -40,15 +42,20 @@ public class Conductor : MonoBehaviour
 
         float startTime = (float)AudioSettings.dspTime;
         music.clip = song.song;
-        music.Play();   
-        IEnumerator clock() {
-            
+        music.PlayDelayed(audioDelayMS/1000);
+        spawn();
 
+        IEnumerator clock() {
+            float tm = Time.time;
+            float atm = (float)AudioSettings.dspTime;
+            print(tm-atm);
             while(music.isPlaying) {
-                
+                tm = Time.time;
+                atm = (float)AudioSettings.dspTime;
+
                 //yield return new WaitUntil(() => ((float)AudioSettings.dspTime-startTime)==music.time;)
                 //print(song.map[songPositionBeats]);
-                //print(bar+" "+beat+" "+songPositionBeats);
+                //print(bar+" "+beat+" ");
                 //Beat(beat,songPositionBeats);               
                 songPosition = music.time;
                 nextBeat = songPosition+song.spb;
@@ -58,44 +65,61 @@ public class Conductor : MonoBehaviour
                 
                 //Eighth(songPositionEighths);
                 //print(songPositionEighths);
-                spawn(song.map[songPositionEighths+8]);
+                //spawn(song.map[songPositionEighths+8]);
                 songPositionEighths++;
 
                 //print(((float)AudioSettings.dspTime-startTime)-music.time);
-                yield return new WaitForSecondsRealtime((song.spb-Time.deltaTime+(audioDelayMS/1000))/2);
+                yield return new WaitForSeconds(((song.spb)/2));
 
-                spawn(song.map[songPositionEighths+8]);
+                //spawn(song.map[songPositionEighths+8]);
                 //print(songPositionEighths);
                 songPositionEighths++;
 
 
-                yield return new WaitForSecondsRealtime((song.spb-Time.deltaTime+(audioDelayMS/1000))/2);
+                yield return new WaitForSeconds(((song.spb)/2));
                 
+                //yield return new WaitForSecondsRealtime(scriptDelayMS/1000);
+
+
             }
         }
-        StartCoroutine(clock());
+        //StartCoroutine(clock());
     }
 
     void Beat(int beat,int songPositionBeats) {;
         //circle.enabled = !circle.enabled;
-        spawn(song.map[songPositionBeats+4]);
+        //spawn(song.map[songPositionBeats+4]);
     }
 
     void Eighth(int songPositionEighths) {
         //print(songPositionEighths+8);
-        spawn(song.map[songPositionEighths+10]);
+        //spawn(song.map[songPositionEighths+10]);
     }
 
-    void spawn(notePosition np) {
-        if (np != notePosition.none) {
-            float noteVelocity = 10;
-            // fuck you for writing this line, moron.
-            float distance = (noteVelocity*((4*(60/song.bpm))))+noteOffset;
-            //print(distance);
+    void spawn() {
+        float noteVelocity = 4.9f;
+        //Transform playhead = new GameObject("Playhead").transform;
+        float distance = noteVelocity*song.spb;
+        foreach (notePosition n in song.map) {
+            
             float offset = 0;
-            if (np==notePosition.left) {offset -= 2;}
-            if (np==notePosition.right) {offset += 2;}
-            Instantiate(note,transform.position+new Vector3(offset,distance,0), Quaternion.identity);
+            switch (n) {
+                case notePosition.left:
+                    offset -= 2;
+                    break;
+
+                case notePosition.right:
+                    offset += 2;
+                    break;
+            }
+
+            playhead.Translate(new Vector3(offset,distance,0));
+            
+            if (n != notePosition.none) {
+                Instantiate(note,playhead.position,playhead.rotation);
+            }
+
+            playhead.Translate(new Vector3(-offset,0,0));
         }
     }
 

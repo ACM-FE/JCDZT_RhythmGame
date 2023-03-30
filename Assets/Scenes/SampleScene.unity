@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44658792, g: 0.49642283, b: 0.5748252, a: 1}
+  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -179,26 +179,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &363065422
-RectTransform:
+--- !u!4 &363065422
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363065421}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -2, z: 90}
+  m_LocalScale: {x: 0.0033783782, y: 0.0033783782, z: 0.0033783782}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1555111459}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 200}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &363065423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -277,8 +272,8 @@ RectTransform:
   m_Children:
   - {fileID: 1341457441}
   - {fileID: 46519255}
-  m_Father: {fileID: 963194228}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -440,7 +435,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &705507996
 MonoBehaviour:
@@ -554,8 +549,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 655328316}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -791,7 +785,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1836026785}
-  - {fileID: 363065422}
   m_Father: {fileID: 46519255}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -905,7 +898,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.3}
+  m_Size: {x: 10, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1001 &6854969675137514371
 PrefabInstance:
@@ -1020,6 +1013,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5032682011825040371, guid: de155cb4bed50284081ca6f2467cd344,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5143501993267511906, guid: de155cb4bed50284081ca6f2467cd344,
         type: 3}
       propertyPath: m_Camera
@@ -1057,13 +1055,28 @@ PrefabInstance:
       objectReference: {fileID: 1341457442}
     - target: {fileID: 6198799377167828032, guid: de155cb4bed50284081ca6f2467cd344,
         type: 3}
+      propertyPath: playhead
+      value: 
+      objectReference: {fileID: 363065422}
+    - target: {fileID: 6198799377167828032, guid: de155cb4bed50284081ca6f2467cd344,
+        type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1341457442}
     - target: {fileID: 6198799377167828032, guid: de155cb4bed50284081ca6f2467cd344,
         type: 3}
       propertyPath: noteOffset
-      value: -7
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198799377167828032, guid: de155cb4bed50284081ca6f2467cd344,
+        type: 3}
+      propertyPath: audioDelayMS
+      value: 3200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198799377167828032, guid: de155cb4bed50284081ca6f2467cd344,
+        type: 3}
+      propertyPath: scriptDelayMS
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8257541387152400660, guid: de155cb4bed50284081ca6f2467cd344,
         type: 3}

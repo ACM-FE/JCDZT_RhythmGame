@@ -35,7 +35,21 @@ public static class midiToBM{
                 //print("no gap");
             }
             //quaver
-            newMap.Add(notePosition.both);
+            //Debug.Log(note.NoteName);
+            switch (note.NoteName.ToString()) {
+                case "C":
+                    newMap.Add(notePosition.left);
+                    break;
+                case "D":
+                    newMap.Add(notePosition.both);
+                    break;
+                case "E":
+                    newMap.Add(notePosition.right);
+                    break;
+                
+            }
+            
+            
             quaver= (int)(note.Time/240);
         }
         foreach (notePosition n in newMap) {
